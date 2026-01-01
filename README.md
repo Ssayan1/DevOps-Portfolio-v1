@@ -6,7 +6,7 @@ A modern, responsive portfolio website showcasing DevOps skills and projects, bu
 
 ## 🌐 Live Demo
 
-**[View Portfolio](https://Ssayan1.github.io/DevOps_portfolio/)**
+**[View Portfolio](https://ssayan1.github.io/DevOps-Portfolio-v1/)**
 
 ## ✨ Features
 
