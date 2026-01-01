@@ -14,15 +14,17 @@ const About = () => {
           <Card className="border-0 shadow-sm">
             <Card.Body className="p-5" style={{ textAlign: 'justify' }}>
               <p className="lead">
-                Hello, I’m Apurva Gargote, an aspiring DevOps Engineer passionate about automation, cloud computing, and designing scalable infrastructure.
+                Hello, I’m Sayan Sanki, an aspiring Junior Cloud / DevOps Engineer with strong hands-on experience in Linux, Docker, Docker Compose, Kubernetes fundamentals, and monitoring tools like Prometheus and Grafana.
+
               </p>
 
               <h4 className="mt-4">Learning Journey</h4>
               <p>
-                I’m actively developing my skills through hands-on projects and structured learning programs. As part of the #90DaysOfDevOps challenge with TrainWithShubham, I’m gaining practical experience with essential DevOps tools and methodologies.
+                I’m actively developing my skills through hands-on projects and structured learning programs. As part of the #90DaysOfDevOps challenge with AI & self study, I’m gaining practical experience with essential DevOps tools and methodologies.
               </p>
               <p>
-                My focus includes building CI/CD pipelines, automating infrastructure, and leveraging cloud platforms to effectively bridge development and operations.
+                I enjoy building production-like systems, containerizing applications, setting up monitoring, and troubleshooting real infrastructure issues. I am actively preparing for entry-level DevOps roles in 2025.
+
               </p>
 
               <h4 className="mt-4">DevOps Mindset</h4>
@@ -32,7 +34,7 @@ const About = () => {
 
               <h4 className="mt-4">Knowledge Sharing</h4>
               <p>
-                I document my learning journey and insights on <a href="https://apurva-g.hashnode.dev/" target="_blank" rel="noopener noreferrer"><u>Hashnode</u></a>, sharing practical solutions and challenges encountered in the DevOps space.
+                I document my learning journey and insights on <a href="https://sayan-g.hashnode.dev/" target="_blank" rel="noopener noreferrer"><u>Hashnode</u></a>, sharing practical solutions and challenges encountered in the DevOps space.
               </p>
 
               <h4 className="mt-4">Interests</h4>
@@ -42,7 +44,7 @@ const About = () => {
 
               <h4 className="mt-4">Let’s Connect</h4>
               <p>
-                Feel free to reach out via email at <a href="mailto:apurvagargote@gmail.com">apurvagargote@gmail.com</a>. I’m open to collaboration, mentorship, and opportunities in DevOps and cloud engineering.
+                Feel free to reach out via email at <a href="mailto:sayansanki1997@gmail.com">sayansanki1997@gmail.com</a>. I’m open to collaboration, mentorship, and opportunities in DevOps and cloud engineering.
               </p>
             </Card.Body>
 

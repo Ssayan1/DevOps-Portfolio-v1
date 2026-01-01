@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { ThemeContext } from '../context/ThemeContext';
 import { FaJenkins, FaDocker, FaAws, FaChartLine } from 'react-icons/fa';
 import { SiTerraform } from 'react-icons/si';
-import profilePhoto from '../assets/profile-photo.jpg'; // Add your photo to assets folder
+import profilePhoto from '../assets/profile-photo1.jpg'; // Add your photo to assets folder
 
 
 const PurpleSpan = styled.span`
@@ -36,7 +36,7 @@ const PolaroidFrame = styled.div`
   transition: all 0.3s ease;
   
   &::after {
-    content: 'Apurva Gargote';
+    content: 'Sayan Sanki';
     position: absolute;
     bottom: 15px;
     left: 50%;
@@ -121,7 +121,7 @@ const Home = () => {
             <Col lg={8} className="text-center text-lg-start">
               <h1 className="display-4 fw-bold mb-4 gradient-text">
                 <span className="hero-header">Hey there, I'm</span><br/>
-                <PurpleSpan className="hero-name">Apurva 👋</PurpleSpan>
+                <PurpleSpan className="hero-name">Sayan 👋</PurpleSpan>
               </h1>
               <div className="lead mb-5 typing-animation">
                 <p>I'm a passionate DevOps enthusiast and aspiring Cloud Engineer with hands-on experience in building and deploying full-stack applications using tools like Docker, Jenkins, AWS, and Kubernetes.</p>

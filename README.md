@@ -6,7 +6,7 @@ A modern, responsive portfolio website showcasing DevOps skills and projects, bu
 
 ## 🌐 Live Demo
 
-**[View Portfolio](https://apurvagargote.github.io/DevOps_portfolio/)**
+**[View Portfolio](https://Ssayan1.github.io/DevOps_portfolio/)**
 
 ## ✨ Features
 
@@ -91,7 +91,7 @@ new-portfolio/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/apurvagargote/DevOps_portfolio.git
+   git clone https://github.com/Ssayan1/DevOps_portfolio.git
    cd DevOps_portfolio
    ```
 
@@ -128,7 +128,7 @@ npm run build
 Create a `.env` file in the frontend directory:
 
 ```env
-REACT_APP_SITE_URL=https://apurvagargote.github.io/DevOps_portfolio
+REACT_APP_SITE_URL=https://Ssayan1.github.io/DevOps_portfolio
 ```
 
 ## 📱 Sections
@@ -201,10 +201,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-**Apurva Gargote**
-- Email: apurvagargote@gmail.com
-- LinkedIn: [linkedin.com/in/apurvagargote](https://linkedin.com/in/apurvagargote)
-- GitHub: [github.com/apurvagargote](https://github.com/apurvagargote)
+**Sayan Sanki**
+- Email: sayansanki1997@gmail.com
+- LinkedIn: [linkedin.com/in/](https://linkedin.com/in/apurvagargote)
+- GitHub: [github.com/](https://github.com/apurvagargote)
 
 ---
 

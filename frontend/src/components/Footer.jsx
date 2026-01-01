@@ -12,10 +12,10 @@ const Footer = () => {
           </Col>
           <Col md={6} className="text-center text-md-end">
             <nav aria-label="Social media links">
-              <a href="https://github.com/apurvagargote" target="_blank" rel="noopener noreferrer" className="text-white me-3" aria-label="GitHub Profile">
+              <a href="https://github.com/Ssayan1" target="_blank" rel="noopener noreferrer" className="text-white me-3" aria-label="GitHub Profile">
                 <FaGithub size={24} aria-hidden="true" />
               </a>
-              <a href="https://linkedin.com/in/apurvagargote" target="_blank" rel="noopener noreferrer" className="text-white" aria-label="LinkedIn Profile">
+              <a href="https://linkedin.com/in/sayansanki199" target="_blank" rel="noopener noreferrer" className="text-white" aria-label="LinkedIn Profile">
                 <FaLinkedin size={24} aria-hidden="true" />
               </a>
             </nav>

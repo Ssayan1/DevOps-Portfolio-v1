@@ -24,7 +24,7 @@ const PDFFrame = styled.iframe`
 `;
 
 const Resume = () => {
-  const googleDriveFileId = "1kxV5SQxPdPjSvgQ0GF1n5MjdkZSMSZcO"; // replace with your actual file ID
+  const googleDriveFileId = ""; // replace with your actual file ID
 
   return (
     <ResumeContainer className="section">
@@ -38,7 +38,7 @@ const Resume = () => {
         <Col lg={8} className="mx-auto text-center">
           <Button 
             href={`https://drive.google.com/uc?export=download&id=${googleDriveFileId}`} 
-            download="Apurva_Gargote_Resume.pdf"
+            download="sayan-s-resume.pdf"
             variant="primary" 
             size="lg" 
             className="resume-download-btn"
@@ -52,7 +52,7 @@ const Resume = () => {
         <Col lg={9} className="mx-auto">
           <PDFFrame
             src={`https://drive.google.com/file/d/${googleDriveFileId}/preview`}
-            title="Apurva Gargote's Resume"
+            title="Sayan's Resume"
             allow="autoplay"
           />
         </Col>

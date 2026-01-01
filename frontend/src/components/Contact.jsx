@@ -64,8 +64,8 @@ const Contact = () => {
                 <div>
                   <h5 className="mb-0">Email</h5>
                   <p className="mb-0">
-                    <a href="mailto:apurvagargote@gmail.com" style={{ textDecoration: 'none', color: 'inherit' }}>
-                      apurvagargote@gmail.com
+                    <a href="mailto:sayansanki1997@gmail.com" style={{ textDecoration: 'none', color: 'inherit' }}>
+                      sayansanki1997@gmail.com
                     </a>
                   </p>
                 </div>
@@ -77,8 +77,8 @@ const Contact = () => {
                 <div>
                   <h5 className="mb-0">LinkedIn</h5>
                   <p className="mb-0">
-                    <a href="https://linkedin.com/in/apurvagargote" target="_blank" rel="noopener noreferrer">
-                      linkedin.com/in/apurvagargote
+                  <a href="https://www.linkedin.com/in/sayansanki199/" target="_blank" rel="noopener noreferrer">
+                      linkedin.com/in/sayansanki199
                     </a>
                   </p>
                 </div>
@@ -89,8 +89,8 @@ const Contact = () => {
                 <div>
                   <h5 className="mb-0">GitHub</h5>
                   <p className="mb-0">
-                    <a href="https://github.com/apurvagargote" target="_blank" rel="noopener noreferrer">
-                      github.com/apurvagargote
+                    <a href="https://github.com/Ssayan1" target="_blank" rel="noopener noreferrer">
+                      github.com/Ssayan1
                     </a>
                   </p>
                 </div>

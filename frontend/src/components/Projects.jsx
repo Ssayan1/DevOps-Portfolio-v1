@@ -168,24 +168,24 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "Cloud-Native Resource Monitoring App",
-      description: "Built a real-time system metrics dashboard using Flask and psutil.",
+      title: "compose-prod-app",
+      description: "Production-ready microservices application using Docker Compose. Includes backend and frontend services, NGINX reverse proxy, Prometheus monitoring, and Grafana dashboards.",
       tags: ["Kubernetes", "Flask", "Python", "Containerd"],
-      github: "https://github.com/apurvagargote/Cloud-native-monitoring-app",
-      outcomes: "Deployed on Kubernetes (KIND) using Containerd; improved setup efficiency by 40% and optimized system responsiveness to 300ms under 100+ concurrent test requests."
+      github: "https://github.com/Ssayan1/docker-compose-production-app",
+      outcomes: "Designed containerized microservices architecture. Configured service networking and reverse proxy. Implemented monitoring with Prometheus and Grafana, achieving 99.9% uptime and proactive issue resolution. Visualized metrics with Grafana dashboards"
     },
     {
       title: "Node.js ToDo App with CI/CD Pipeline",
       description: "Designed and automated a full CI/CD pipeline using Jenkins and GitHub Webhooks.",
       tags: ["Node.js", "Jenkins", "Docker", "AWS EC2", "GitHub Webhooks"],
-      github: "https://github.com/apurvagargote/Node-todo-cicd",
+      github: "https://github.com/Ssayan1/Node-todo-cicd",
       outcomes: "Reduced deployment time by 53% (15min → 7min); maintained 95% build success rate and enabled zero-downtime releases using Docker and Nginx reverse proxy on AWS EC2."
     },
     {
       title: "Two-Tier Flask Web App on Kubernetes",
       description: "Deployed a Flask–MySQL app on Kubernetes with persistent volumes and service discovery.",
       tags: ["Flask", "MySQL", "Kubernetes", "Containerd", "AWS"],
-      github: "https://github.com/apurvagargote/two-tier-flask-app",
+      github: "https://github.com/Ssayan1/two-tier-flask-app",
       outcomes: "Configured 3 services, 2 PVCs, and horizontal pod autoscaling for scalability and ensured 99.9% uptime through resilient deployment and AWS-based network security."
     }
   ];
