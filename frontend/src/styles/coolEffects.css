@@ -12,8 +12,8 @@
 /* Enhanced gradient text effect */
 .gradient-text {
   background: linear-gradient(90deg, var(--vibrant-blue), var(--vibrant-purple), var(--vibrant-pink));
-  background-clip: text;
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   animation: gradient-shift 8s ease infinite;
   background-size: 300% 300%;
@@ -27,8 +27,8 @@
   top: 0;
   z-index: -1;
   background: linear-gradient(90deg, var(--vibrant-blue), var(--vibrant-purple), var(--vibrant-pink));
-  background-clip: text;
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   filter: blur(8px);
   opacity: 0.7;
@@ -138,8 +138,8 @@
 /* Dark mode enhancements */
 [data-theme='dark'] .gradient-text {
   background: linear-gradient(90deg, var(--vibrant-teal), var(--vibrant-blue), var(--vibrant-purple));
-  background-clip: text;
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   text-shadow: 0 0 15px rgba(0, 191, 255, 0.5);
 }

@@ -6,7 +6,7 @@ A modern, responsive portfolio website showcasing DevOps skills and projects, bu
 
 ## 🌐 Live Demo
 
-**[View Portfolio](https://ssayan1.github.io/DevOps-Portfolio-v1/)**
+**[View Portfolio](https://ssayan.github.io/DevOps-Portfolio/)**
 
 ## ✨ Features
 
@@ -29,7 +29,8 @@ A modern, responsive portfolio website showcasing DevOps skills and projects, bu
 ### DevOps & Deployment
 - **GitHub Actions** - Automated CI/CD pipeline
 - **GitHub Pages** - Static site hosting
-- **Docker** - Containerization (optional)
+- **Docker & Docker Compose** - Containerization
+- **Kubernetes** - Container Orchestration
 - **Terraform** - Infrastructure as Code (for AWS deployment)
 
 ## 🏗️ Architecture
@@ -49,35 +50,41 @@ Live Website
 ## 📁 Project Structure
 
 ```
-new-portfolio/
-├── frontend/
-│   ├── public/
-│   │   ├── index.html
-│   │   └── .nojekyll
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── Header.jsx
-│   │   │   ├── Home.jsx
-│   │   │   ├── About.jsx
-│   │   │   ├── Skills.jsx
-│   │   │   ├── Projects.jsx
-│   │   │   ├── Resume.jsx
-│   │   │   ├── Contact.jsx
-│   │   │   └── Footer.jsx
-│   │   ├── context/
-│   │   │   └── ThemeContext.js
-│   │   ├── styles/
-│   │   │   ├── index.css
-│   │   │   ├── themes.css
-│   │   │   ├── animations.css
-│   │   │   └── coolEffects.css
-│   │   └── App.js
-│   └── package.json
+DevOps_portfolio/
+├── .dockerignore
+├── .gitignore
+├── docker-compose.yml
+├── README.md
 ├── .github/
 │   └── workflows/
-│       └── deploy.yml
-├── terraform/ (optional)
-└── README.md
+│       ├── deploy.yml
+│       └── docker-image.yml
+├── frontend/
+│   ├── .dockerignore
+│   ├── .env.production
+│   ├── Dockerfile
+│   ├── nginx.conf
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── public/
+│   │   ├── .nojekyll
+│   │   ├── index.html
+│   │   └── manifest.json
+│   └── src/
+│       ├── App.js
+│       ├── index.js
+│       ├── assets/
+│       ├── components/
+│       ├── context/
+│       ├── services/
+│       └── styles/
+├── k8s/
+│   ├── frontend/
+│   │   ├── deployment.yaml
+│   │   └── service.yaml
+│   └── ingress/
+│       └── portfolio-ingress.yaml
+└── screenshots/
 ```
 
 ## 🚀 Getting Started
@@ -86,6 +93,7 @@ new-portfolio/
 - Node.js (v18 or higher)
 - npm or yarn
 - Git
+- Docker
 
 ### Local Development
 
@@ -128,7 +136,7 @@ npm run build
 Create a `.env` file in the frontend directory:
 
 ```env
-REACT_APP_SITE_URL=https://Ssayan1.github.io/DevOps_portfolio
+REACT_APP_SITE_URL=https://ssayan.github.io/DevOps-Portfolio/
 ```
 
 ## 📱 Sections
@@ -158,10 +166,27 @@ REACT_APP_SITE_URL=https://Ssayan1.github.io/DevOps_portfolio
 
 ## 🚀 Deployment Options
 
+This portfolio is deployed using GitHub Actions CI/CD.
+Every push to the `main` branch automatically builds the React application
+and deploys it to GitHub Pages.
+
+
 ### GitHub Pages (Current)
 - Automatic deployment via GitHub Actions
 - Free hosting for public repositories
 - Custom domain support
+
+### Docker
+```bash
+# Using Docker Compose
+docker-compose up -d
+```
+
+### Kubernetes
+```bash
+# Apply the kubernetes manifests
+kubectl apply -f k8s/
+```
 
 ### AWS (Alternative)
 ```bash
@@ -169,15 +194,6 @@ REACT_APP_SITE_URL=https://Ssayan1.github.io/DevOps_portfolio
 cd terraform
 terraform init
 terraform apply
-```
-
-### Docker (Alternative)
-```bash
-# Build image
-docker build -t devops-portfolio .
-
-# Run container
-docker run -p 3000:3000 devops-portfolio
 ```
 
 ## 📊 Performance
@@ -197,14 +213,14 @@ docker run -p 3000:3000 devops-portfolio
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
 
 ## 📞 Contact
 
 **Sayan Sanki**
 - Email: sayansanki1997@gmail.com
-- LinkedIn: [linkedin.com/in/](https://linkedin.com/in/apurvagargote)
-- GitHub: [github.com/](https://github.com/apurvagargote)
+- LinkedIn: [linkedin.com/in/ssayan](https://www.linkedin.com/in/sayan-sanki-4161461a8/)
+- GitHub: [github.com/Ssayan1](https://github.com/Ssayan1)
 
 ---
 

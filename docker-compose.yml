@@ -3,7 +3,13 @@ version: "3.9"
 services:
   frontend:
     image: ssayan/devops-portfolio:latest
-    container_name: devops-portfolio
+    container_name: devops-portfolio-frontend
     ports:
-      - "8080:80"
-    restart: unless-stopped
+      - "${FRONTEND_PORT}:80"
+    restart: always
+    networks:
+      - portfolio-net
+
+networks:
+  portfolio-net:
+    driver: bridge
