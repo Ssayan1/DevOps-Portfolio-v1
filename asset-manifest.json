@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "./static/css/main.833eb8fa.css",
-    "main.js": "./static/js/main.f4f0d51f.js",
-    "static/js/453.c2e8e339.chunk.js": "./static/js/453.c2e8e339.chunk.js",
-    "static/media/profile-photo1.jpg": "./static/media/profile-photo1.e1fddbb8a5bf572b4017.jpg",
-    "index.html": "./index.html",
-    "main.833eb8fa.css.map": "./static/css/main.833eb8fa.css.map",
-    "main.f4f0d51f.js.map": "./static/js/main.f4f0d51f.js.map",
-    "453.c2e8e339.chunk.js.map": "./static/js/453.c2e8e339.chunk.js.map"
+    "main.css": "/DevOps-Portfolio/static/css/main.833eb8fa.css",
+    "main.js": "/DevOps-Portfolio/static/js/main.59c99f8e.js",
+    "static/js/453.c2e8e339.chunk.js": "/DevOps-Portfolio/static/js/453.c2e8e339.chunk.js",
+    "static/media/profile-photo1.jpg": "/DevOps-Portfolio/static/media/profile-photo1.e1fddbb8a5bf572b4017.jpg",
+    "index.html": "/DevOps-Portfolio/index.html",
+    "main.833eb8fa.css.map": "/DevOps-Portfolio/static/css/main.833eb8fa.css.map",
+    "main.59c99f8e.js.map": "/DevOps-Portfolio/static/js/main.59c99f8e.js.map",
+    "453.c2e8e339.chunk.js.map": "/DevOps-Portfolio/static/js/453.c2e8e339.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.833eb8fa.css",
-    "static/js/main.f4f0d51f.js"
+    "static/js/main.59c99f8e.js"
   ]
 }
