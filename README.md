@@ -1,9 +1,7 @@
 # DevOps Portfolio 🚀
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
-[![GitHub Actions Status](https://github.com/Ssayan1/DevOps-Portfolio-v1/actions/workflows/deploy.yml/badge.svg)]
-
-
+![GitHub Actions Status](https://github.com/Ssayan1/DevOps-Portfolio-v1/actions/workflows/deploy.yml/badge.svg)
 
 A modern, responsive portfolio website showcasing DevOps skills and projects, built with React and deployed using GitHub Pages with automated CI/CD.
 
@@ -16,7 +14,6 @@ A modern, responsive portfolio website showcasing DevOps skills and projects, bu
 👉 **Copy & paste into browser**: http://3.111.176.233/
 
 > Note: HTTPS is not enabled to keep infrastructure simple and cost-free.
-
 
 ## ✨ About the Project
 
@@ -51,18 +48,17 @@ The portfolio is fully responsive, and includes sections for an introduction, ab
 - Kubernetes (manifests included)
 - Terraform (planned)
 
-
 ## 🏗️ Architecture Overview
+
 ```
-User Browser
-|
-| HTTP (Port 80)
-v
-AWS EC2 (Amazon Linux 2023)
-|
-| Docker
-v
-Nginx (serving React build)
+User Browser  
+&nbsp;&nbsp;⬇  
+AWS EC2 (Amazon Linux 2023)  
+&nbsp;&nbsp;⬇  
+Docker Container  
+&nbsp;&nbsp;⬇  
+Nginx → React Build (Static Files)
+
 ```
 ## 🚀 Getting Started
 
@@ -92,7 +88,6 @@ To get a local copy up and running follow these simple example steps.
     ```
 4.  Open your browser to `http://localhost:3000`
 
-
 ## 🚀 Deployment
 
 This portfolio is designed to be deployed in various environments:
@@ -108,7 +103,6 @@ You can build and run the portfolio using Docker and Docker Compose:
 ```sh
 docker-compose up -d
 ```
-
 ### Kubernetes
 
 To deploy the portfolio to a Kubernetes cluster, you can use the provided manifest files:
@@ -116,6 +110,19 @@ To deploy the portfolio to a Kubernetes cluster, you can use the provided manife
 ```sh
 kubectl apply -f k8s/
 ```
+## 🔄 CI/CD Pipeline
+
+This project uses GitHub Actions for automation:
+
+- On push to `main`:
+  - Build Docker image
+  - Push image to Docker Hub
+
+Workflows:
+- `.github/workflows/docker-image.yml`
+- `.github/workflows/deploy.yml`
+
+Deployment is performed by pulling the image on AWS EC2 and running it with Docker.
 
 ## 📚 What I Learned
 
