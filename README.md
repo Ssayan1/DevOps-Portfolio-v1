@@ -1,7 +1,8 @@
 # DevOps Portfolio 🚀
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
-[![GitHub Actions Status](https://github.com/Ssayan1/DevOps_portfolio_v1/actions/workflows/deploy.yml/badge.svg)](https://github.com/Ssayan1/DevOps_portfolio_v1/actions)
+[![GitHub Actions Status](https://github.com/Ssayan1/DevOps-Portfolio-v1/actions/workflows/deploy.yml/badge.svg)]
+
 
 
 A modern, responsive portfolio website showcasing DevOps skills and projects, built with React and deployed using GitHub Pages with automated CI/CD.
