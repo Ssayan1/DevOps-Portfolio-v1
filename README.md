@@ -1,227 +1,147 @@
 # DevOps Portfolio 🚀
 
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+[![GitHub Actions Status](https://github.com/Ssayan1/DevOps_portfolio_v1/actions/workflows/deploy.yml/badge.svg)](https://github.com/Ssayan1/DevOps_portfolio_v1/actions)
+
+
 A modern, responsive portfolio website showcasing DevOps skills and projects, built with React and deployed using GitHub Pages with automated CI/CD.
 
 ![Homepage Screenshot](frontend/src/assets/HomePage.png)
 
 ## 🌐 Live Demo
 
-**[View Portfolio](https://ssayan.github.io/DevOps-Portfolio/)**
+⚠️ Hosted on AWS EC2 using Docker (HTTP).
 
-## ✨ Features
+👉 **Copy & paste into browser**: http://3.111.176.233/
 
-- **Responsive Design** - Optimized for all devices (desktop, tablet, mobile)
-- **Dark/Light Theme** - Toggle between themes with smooth transitions
-- **Interactive Animations** - Scroll-based reveals and hover effects
-- **Modern UI/UX** - Clean design with gradient effects and smooth animations
-- **Contact Form** - Functional contact form with success notifications
-- **Resume Viewer** - Embedded PDF resume viewer
-- **Mobile-First** - Optimized for mobile devices with proper navigation
+> Note: HTTPS is not enabled to keep infrastructure simple and cost-free.
 
-## 🛠️ Tech Stack
+
+## ✨ About the Project
+
+This project is a personal portfolio website designed to showcase my skills and experience in DevOps and Cloud Engineering. It's a single-page application built with React, featuring a clean and modern design, with a focus on a great user experience.
+
+The portfolio is fully responsive, and includes sections for an introduction, about me, my skills, projects, resume, and a contact form. It also features a dark/light theme toggle.
+
+## 🛠️ Built With
+
+*   [React](https://reactjs.org/)
+*   [React Bootstrap](https://react-bootstrap.github.io/)
+*   [Styled Components](https://styled-components.com/)
+*   [React Icons](https://react-icons.github.io/react-icons/)
+*   [GitHub Actions](https://github.com/features/actions)
+*   [Docker](https://www.docker.com/)
+*   [Kubernetes](https://kubernetes.io/)
+*   [Terraform](https://www.terraform.io/)
+*   [AWS](https://aws.amazon.com/)
 
 ### Frontend
-- **React** - Component-based UI library
-- **React Bootstrap** - Responsive UI components
-- **Styled Components** - CSS-in-JS styling
-- **React Icons** - Icon library for UI elements
+- React
+- React Bootstrap
+- Styled Components
 
-### DevOps & Deployment
-- **GitHub Actions** - Automated CI/CD pipeline
-- **GitHub Pages** - Static site hosting
-- **Docker & Docker Compose** - Containerization
-- **Kubernetes** - Container Orchestration
-- **Terraform** - Infrastructure as Code (for AWS deployment)
+### DevOps & Cloud
+- Docker
+- GitHub Actions (CI/CD)
+- AWS EC2
+- Nginx
 
-## 🏗️ Architecture
+### Learning / Experimental
+- Kubernetes (manifests included)
+- Terraform (planned)
 
+
+## 🏗️ Architecture Overview
 ```
-GitHub Repository
-    ↓
-GitHub Actions (CI/CD)
-    ↓
-Build & Test
-    ↓
-Deploy to GitHub Pages
-    ↓
-Live Website
+User Browser
+|
+| HTTP (Port 80)
+v
+AWS EC2 (Amazon Linux 2023)
+|
+| Docker
+v
+Nginx (serving React build)
 ```
-
-## 📁 Project Structure
-
-```
-DevOps_portfolio/
-├── .dockerignore
-├── .gitignore
-├── docker-compose.yml
-├── README.md
-├── .github/
-│   └── workflows/
-│       ├── deploy.yml
-│       └── docker-image.yml
-├── frontend/
-│   ├── .dockerignore
-│   ├── .env.production
-│   ├── Dockerfile
-│   ├── nginx.conf
-│   ├── package-lock.json
-│   ├── package.json
-│   ├── public/
-│   │   ├── .nojekyll
-│   │   ├── index.html
-│   │   └── manifest.json
-│   └── src/
-│       ├── App.js
-│       ├── index.js
-│       ├── assets/
-│       ├── components/
-│       ├── context/
-│       ├── services/
-│       └── styles/
-├── k8s/
-│   ├── frontend/
-│   │   ├── deployment.yaml
-│   │   └── service.yaml
-│   └── ingress/
-│       └── portfolio-ingress.yaml
-└── screenshots/
-```
-
 ## 🚀 Getting Started
 
+To get a local copy up and running follow these simple example steps.
+
 ### Prerequisites
-- Node.js (v18 or higher)
-- npm or yarn
-- Git
-- Docker
 
-### Local Development
+*   Node.js (v18 or higher)
+*   npm or yarn
+*   Git
+*   Docker
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Ssayan1/DevOps_portfolio.git
-   cd DevOps_portfolio
-   ```
+### Installation
 
-2. **Install dependencies**
-   ```bash
-   cd frontend
-   npm install
-   ```
-
-3. **Start development server**
-   ```bash
-   npm start
-   ```
-
-4. **Open browser**
-   Navigate to `http://localhost:3000`
-
-### Build for Production
-
-```bash
-npm run build
-```
-
-## 🔧 Configuration
-
-### GitHub Pages Setup
-
-1. Go to repository **Settings** → **Pages**
-2. Select **GitHub Actions** as source
-3. The workflow will automatically deploy on push to main branch
-
-### Environment Variables
-
-Create a `.env` file in the frontend directory:
-
-```env
-REACT_APP_SITE_URL=https://ssayan.github.io/DevOps-Portfolio/
-```
-
-## 📱 Sections
-
-- **Home** - Hero section with introduction and CTA buttons
-- **About** - Personal background and career journey
-- **Skills** - Technical skills organized by categories
-- **Projects** - Showcase of DevOps projects with GitHub links
-- **Resume** - Embedded PDF resume viewer
-- **Contact** - Contact form and social media links
-
-## 🎨 Customization
-
-### Themes
-- Edit `src/styles/themes.css` for color schemes
-- Modify `src/context/ThemeContext.js` for theme logic
-
-### Content
-- Update personal information in respective components
-- Replace profile photo in `src/assets/`
-- Modify project data in `Projects.jsx`
-
-### Styling
-- Global styles: `src/styles/index.css`
-- Animations: `src/styles/animations.css`
-- Effects: `src/styles/coolEffects.css`
-
-## 🚀 Deployment Options
-
-This portfolio is deployed using GitHub Actions CI/CD.
-Every push to the `main` branch automatically builds the React application
-and deploys it to GitHub Pages.
+1.  Clone the repo
+    ```sh
+    git clone https://github.com/Ssayan1/DevOps_portfolio_v1.git
+    ```
+2.  Install NPM packages
+    ```sh
+    cd frontend
+    npm install
+    ```
+3.  Start the development server
+    ```sh
+    npm start
+    ```
+4.  Open your browser to `http://localhost:3000`
 
 
-### GitHub Pages (Current)
-- Automatic deployment via GitHub Actions
-- Free hosting for public repositories
-- Custom domain support
+## 🚀 Deployment
+
+This portfolio is designed to be deployed in various environments:
+
+### GitHub Pages
+
+The `main` branch is automatically deployed to GitHub Pages using a GitHub Actions workflow.
 
 ### Docker
-```bash
-# Using Docker Compose
+
+You can build and run the portfolio using Docker and Docker Compose:
+
+```sh
 docker-compose up -d
 ```
 
 ### Kubernetes
-```bash
-# Apply the kubernetes manifests
+
+To deploy the portfolio to a Kubernetes cluster, you can use the provided manifest files:
+
+```sh
 kubectl apply -f k8s/
 ```
 
-### AWS (Alternative)
-```bash
-# Using Terraform
-cd terraform
-terraform init
-terraform apply
-```
+## 📚 What I Learned
 
-## 📊 Performance
+- Containerizing a React application with Docker
+- Debugging Docker networking and port bindings
+- Deploying containers on AWS EC2
+- Configuring Security Groups for public access
+- Setting up CI/CD pipelines using GitHub Actions
+- Troubleshooting real-world deployment issues
 
-- **Lighthouse Score**: 95+ (Performance, Accessibility, Best Practices, SEO)
-- **Mobile Responsive**: Optimized for 375px+ screens
-- **Load Time**: < 3 seconds on 3G networks
-- **Image Optimization**: Lazy loading and compressed assets
 
 ## 🤝 Contributing
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit changes (`git commit -m 'Add amazing feature'`)
-4. Push to branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1.  Fork the Project
+2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4.  Push to the Branch (`git push origin feature/AmazingFeature`)
+5.  Open a Pull Request
 
 ## 📄 License
 
-This project is licensed under the MIT License.
+Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 📞 Contact
 
-**Sayan Sanki**
-- Email: sayansanki1997@gmail.com
-- LinkedIn: [linkedin.com/in/ssayan](https://www.linkedin.com/in/sayan-sanki-4161461a8/)
-- GitHub: [github.com/Ssayan1](https://github.com/Ssayan1)
+Sayan Sanki - sayansanki1997@gmail.com
 
----
-
-⭐ **Star this repository if you found it helpful!**
+Project Link: [https://github.com/Ssayan1/DevOps_portfolio_v1](https://github.com/Ssayan1/DevOps_portfolio_v1)
