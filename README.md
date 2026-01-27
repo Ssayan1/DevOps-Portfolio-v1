@@ -3,7 +3,7 @@
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 ![GitHub Actions Status](https://github.com/Ssayan1/DevOps-Portfolio-v1/actions/workflows/deploy.yml/badge.svg)
 
-A modern, responsive portfolio website showcasing DevOps skills and projects, built with React and deployed using GitHub Pages with automated CI/CD.
+A production-ready React portfolio deployed using **Docker, Kubernetes, and AWS EC2**, with CI/CD automation.
 
 ![Homepage Screenshot](frontend/src/assets/HomePage.png)
 
@@ -13,7 +13,8 @@ A modern, responsive portfolio website showcasing DevOps skills and projects, bu
 
 👉 **Copy & paste into browser**: http://3.111.176.233/
 
-> Note: HTTPS is not enabled to keep infrastructure simple and cost-free.
+> Hosted on AWS EC2 using Docker (HTTP).  
+> Kubernetes deployment demonstrated locally via Minikube.
 
 ## ✨ About the Project
 
@@ -48,18 +49,18 @@ The portfolio is fully responsive, and includes sections for an introduction, ab
 - Kubernetes (manifests included)
 - Terraform (planned)
 
-## 🏗️ Architecture Overview
+## 🏗️ Architecture
 
-```
-User Browser  
-&nbsp;&nbsp;⬇  
-AWS EC2 (Amazon Linux 2023)  
-&nbsp;&nbsp;⬇  
-Docker Container  
-&nbsp;&nbsp;⬇  
-Nginx → React Build (Static Files)
+- React Single Page Application
+- Multi-stage Docker build (Node → Nginx)
+- Kubernetes Deployment with:
+  - ReplicaSet (2 pods)
+  - NodePort Service
+  - NGINX Ingress (host-based routing)
+- AWS EC2 deployment using Docker
+- CI/CD with GitHub Actions
 
-```
+
 ## 🚀 Getting Started
 
 To get a local copy up and running follow these simple example steps.
@@ -88,10 +89,24 @@ To get a local copy up and running follow these simple example steps.
     ```
 4.  Open your browser to `http://localhost:3000`
 
-## 🚀 Deployment
+## 🚀 Deployment Options
 
-This portfolio is designed to be deployed in various environments:
+### 1️⃣ Docker (Local / EC2)
 
+```bash
+docker pull ssayan/devops-portfolio:latest
+docker run -d -p 80:80 ssayan/devops-portfolio:latest
+```
+### 2️⃣ Kubernetes (Minikube)
+
+```bash
+kubectl apply -f k8s/
+minikube tunnel
+```
+Access:
+```bash
+curl -H "Host: portfolio.local" http://127.0.0.1
+```
 ### GitHub Pages
 
 The `main` branch is automatically deployed to GitHub Pages using a GitHub Actions workflow.
@@ -110,19 +125,11 @@ To deploy the portfolio to a Kubernetes cluster, you can use the provided manife
 ```sh
 kubectl apply -f k8s/
 ```
-## 🔄 CI/CD Pipeline
+## 🔄 CI/CD (GitHub Actions)
 
-This project uses GitHub Actions for automation:
+Docker image built & pushed automatically
 
-- On push to `main`:
-  - Build Docker image
-  - Push image to Docker Hub
-
-Workflows:
-- `.github/workflows/docker-image.yml`
-- `.github/workflows/deploy.yml`
-
-Deployment is performed by pulling the image on AWS EC2 and running it with Docker.
+Deployment pipeline ready for cloud environments
 
 ## 📚 What I Learned
 
