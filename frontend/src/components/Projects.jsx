@@ -182,11 +182,11 @@ const Projects = () => {
       outcomes: "Reduced deployment time by 53% (15min → 7min); maintained 95% build success rate and enabled zero-downtime releases using Docker and Nginx reverse proxy on AWS EC2."
     },
     {
-      title: "Two-Tier Flask Web App on Kubernetes",
-      description: "Deployed a Flask–MySQL app on Kubernetes with persistent volumes and service discovery.",
-      tags: ["Flask", "MySQL", "Kubernetes", "Containerd", "AWS"],
-      github: "https://github.com/Ssayan1/two-tier-flask-app",
-      outcomes: "Configured 3 services, 2 PVCs, and horizontal pod autoscaling for scalability and ensured 99.9% uptime through resilient deployment and AWS-based network security."
+      title: "AWS S3 + CloudFront DevOps Portfolio(CI/CD)",
+      description: "Deployed a production-ready React portfolio using AWS S3 static hosting and CloudFront CDN with full CI/CD automation via GitHub Actions.",
+      tags: ["AWS S3", "CloudFront", "Terraform", "GitHub Actions", "CI/CD", "React"],
+      github: "https://github.com/Ssayan1/DevOps-Portfolio-v1",
+      outcomes: "Built Infrastructure as Code using Terraform for S3 and CloudFront. Implemented automated CI/CD pipeline deploying to AWS on every push. Enabled global CDN delivery with HTTPS and cache invalidation, reducing load latency by ~60% and achieving fully automated zero-touch deployments."
     }
   ];
 
