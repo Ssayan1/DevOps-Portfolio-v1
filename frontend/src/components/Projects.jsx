@@ -187,6 +187,13 @@ const Projects = () => {
       tags: ["Flask", "MySQL", "Kubernetes", "Containerd", "AWS"],
       github: "https://github.com/Ssayan1/two-tier-flask-app",
       outcomes: "Configured 3 services, 2 PVCs, and horizontal pod autoscaling for scalability and ensured 99.9% uptime through resilient deployment and AWS-based network security."
+    },
+    {
+      title: "Two-Tier Flask Web App on Kubernetes",
+      description: "Deployed a Flask–MySQL app on Kubernetes with persistent volumes and service discovery.",
+      tags: ["Flask", "MySQL", "Kubernetes", "Containerd", "AWS"],
+      github: "https://github.com/Ssayan1/two-tier-flask-app",
+      outcomes: "Configured 3 services, 2 PVCs, and horizontal pod autoscaling for scalability and ensured 99.9% uptime through resilient deployment and AWS-based ne>
     }
   ];
 
