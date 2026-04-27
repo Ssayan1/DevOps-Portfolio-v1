@@ -1,4 +1,4 @@
-# DevOps Portfolio 🚀
+# 🚀 DevOps Portfolio Deployment (AWS + Terraform + CI/CD)
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 ![GitHub Actions Status](https://github.com/Ssayan1/DevOps-Portfolio-v1/actions/workflows/deploy.yml/badge.svg)
@@ -7,156 +7,135 @@ A production-ready React portfolio deployed using **Docker, Kubernetes, and AWS 
 
 ![Homepage Screenshot](frontend/src/assets/HomePage.png)
 
+---
+
 ## 🌐 Live Demo
 
-⚠️ Hosted on AWS EC2 using Docker (HTTP).
+👉 **Copy & paste into browser**: https://d61zgekfhvg0k.cloudfront.net/
 
-👉 **Copy & paste into browser**: http://3.111.176.233/
-
-> Hosted on AWS EC2 using Docker (HTTP).  
-> Kubernetes deployment demonstrated locally via Minikube.
+---
 
 ## ✨ About the Project
 
-This project is a personal portfolio website designed to showcase my skills and experience in DevOps and Cloud Engineering. It's a single-page application built with React, featuring a clean and modern design, with a focus on a great user experience.
+This project demonstrates a complete DevOps workflow by deploying a React-based portfolio application using:
 
-The portfolio is fully responsive, and includes sections for an introduction, about me, my skills, projects, resume, and a contact form. It also features a dark/light theme toggle.
+- Infrastructure as Code (Terraform)
+- Cloud hosting on AWS (S3 + CloudFront)
+- Automated CI/CD pipeline using GitHub Actions
 
-## 🛠️ Built With
+Every code push triggers an automated deployment pipeline, making the application continuously updated and globally accessible.
 
-*   [React](https://reactjs.org/)
-*   [React Bootstrap](https://react-bootstrap.github.io/)
-*   [Styled Components](https://styled-components.com/)
-*   [React Icons](https://react-icons.github.io/react-icons/)
-*   [GitHub Actions](https://github.com/features/actions)
-*   [Docker](https://www.docker.com/)
-*   [Kubernetes](https://kubernetes.io/)
-*   [Terraform](https://www.terraform.io/)
-*   [AWS](https://aws.amazon.com/)
-
-### Frontend
-- React
-- React Bootstrap
-- Styled Components
-
-### DevOps & Cloud
-- Docker
-- GitHub Actions (CI/CD)
-- AWS EC2
-- Nginx
-
-### Learning / Experimental
-- Kubernetes (manifests included)
-- Terraform (planned)
+---
 
 ## 🏗️ Architecture
 
-- React Single Page Application
-- Multi-stage Docker build (Node → Nginx)
-- Kubernetes Deployment with:
-  - ReplicaSet (2 pods)
-  - NodePort Service
-  - NGINX Ingress (host-based routing)
-- AWS EC2 deployment using Docker
-- CI/CD with GitHub Actions
+User → CloudFront (CDN) → S3 (Static Hosting)
+↑
+GitHub Actions (CI/CD)
 
 
-## 🚀 Getting Started
+---
 
-To get a local copy up and running follow these simple example steps.
+## 🛠️ Tech Stack
 
-### Prerequisites
+- Cloud: AWS (S3, CloudFront, IAM)
+- Infrastructure as Code: Terraform
+- CI/CD: GitHub Actions
+- Frontend: React.js
+- Version Control: Git & GitHub
 
-*   Node.js (v18 or higher)
-*   npm or yarn
-*   Git
-*   Docker
+---
 
-### Installation
+## ⚙️ Features
 
-1.  Clone the repo
-    ```sh
-    git clone https://github.com/Ssayan1/DevOps_portfolio_v1.git
-    ```
-2.  Install NPM packages
-    ```sh
-    cd frontend
-    npm install
-    ```
-3.  Start the development server
-    ```sh
-    npm start
-    ```
-4.  Open your browser to `http://localhost:3000`
+- ✅ Fully automated CI/CD pipeline
+- ✅ Infrastructure provisioned using Terraform
+- ✅ Static website hosting on S3
+- ✅ Global content delivery via CloudFront
+- ✅ Automatic cache invalidation after deployment
+- ✅ Scalable and production-ready architecture
 
-## 🚀 Deployment Options
+---
 
-### 1️⃣ Docker (Local / EC2)
+## 🚀 CI/CD Workflow
 
-```bash
-docker pull ssayan/devops-portfolio:latest
-docker run -d -p 80:80 ssayan/devops-portfolio:latest
+1. Developer pushes code to GitHub
+2. GitHub Actions triggers workflow
+3. React app is built
+4. Files are uploaded to S3
+5. CloudFront cache is invalidated
+6. Updated website is served globally
+
+---
+
+## 📂 Project Structure
+
 ```
-### 2️⃣ Kubernetes (Minikube)
-
-```bash
-kubectl apply -f k8s/
-minikube tunnel
+DevOps-Portfolio/
+│
+├── frontend/          # React application
+├── terraform/         # Terraform infrastructure code
+├── .github/workflows/ # CI/CD pipelines
+├── docker-compose.yml
+└── README.md
 ```
-Access:
-```bash
-curl -H "Host: portfolio.local" http://127.0.0.1
+---
+
+## 🔧 Terraform Setup
+
+Initialize Terraform
 ```
-### GitHub Pages
-
-The `main` branch is automatically deployed to GitHub Pages using a GitHub Actions workflow.
-
-### Docker
-
-You can build and run the portfolio using Docker and Docker Compose:
-
-```sh
-docker-compose up -d
+terraform init
 ```
-### Kubernetes
-
-To deploy the portfolio to a Kubernetes cluster, you can use the provided manifest files:
-
-```sh
-kubectl apply -f k8s/
+Preview Changes
 ```
-## 🔄 CI/CD (GitHub Actions)
+terraform plan
+```
+Apply Infrastructure
+```
+terraform apply
+```
+---
 
-Docker image built & pushed automatically
+## 🔐 GitHub Secrets Required
 
-Deployment pipeline ready for cloud environments
+To enable CI/CD, configure the following secrets:
 
-## 📚 What I Learned
+AWS_ACCESS_KEY_ID
+AWS_SECRET_ACCESS_KEY
+AWS_REGION
+S3_BUCKET
+CLOUDFRONT_DISTRIBUTION_ID
 
-- Containerizing a React application with Docker
-- Debugging Docker networking and port bindings
-- Deploying containers on AWS EC2
-- Configuring Security Groups for public access
-- Setting up CI/CD pipelines using GitHub Actions
-- Troubleshooting real-world deployment issues
+---
 
+## 📸 Screenshots
 
-## 🤝 Contributing
+Add screenshots of:
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+- CloudFront distribution
+- S3 bucket
+- GitHub Actions success run
 
-1.  Fork the Project
-2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4.  Push to the Branch (`git push origin feature/AmazingFeature`)
-5.  Open a Pull Request
+---
 
-## 📄 License
+## 📈 Future Improvements
 
-Distributed under the MIT License. See `LICENSE` for more information.
+- 🔐 Secure S3 using Origin Access Control (OAC)
+- 🌐 Custom domain with HTTPS (Route53 + ACM)
+- 📊 Monitoring with CloudWatch
+- 🐳 Containerized deployment using Docker & ECS
+- ☸️ Kubernetes (EKS) deployment
 
-## 📞 Contact
+---
 
-Sayan Sanki - sayansanki1997@gmail.com
+## 👨‍💻 Author
 
-Project Link: [https://github.com/Ssayan1/DevOps_portfolio_v1](https://github.com/Ssayan1/DevOps_portfolio_v1)
+Sayan Sanki
+🔗 GitHub: https://github.com/Ssayan1
+
+---
+
+⭐ If you like this project
+
+Give it a star ⭐ and feel free to fork!
